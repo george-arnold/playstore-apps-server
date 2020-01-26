@@ -6,6 +6,7 @@ describe('Playstore App', () => {
   it('should GET /apps', () => {
     return supertest(app)
       .get('/apps')
-      .expect(200);
+      .expect(200)
+      .expect('Content-Type', /json/);
   });
 });
